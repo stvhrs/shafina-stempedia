@@ -1,11 +1,21 @@
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 
 class AppTheme {
   AppTheme();
-  static Color primaryColor = Color.fromARGB(255, 75, 84, 167);
-  static Color secondaryColor = Color.fromARGB(255, 212, 231, 72);
+  static Color primaryColor = const Color.fromARGB(255, 75, 84, 167);
+  static Color secondaryColor = const Color.fromARGB(255, 251, 186, 5);
   static ThemeData getAppThemeData() {
     return ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: primaryColor,
+          titleTextStyle: const TextStyle(
+         letterSpacing: 2,
+              color: Colors.white,
+              fontFamily: 'Nunito',
+              fontSize: 20,
+              fontWeight: FontWeight.bold),
+          centerTitle: true,
+        ),
         fontFamily: 'Nunito',
         useMaterial3: true,
         dialogBackgroundColor: Colors.white,
@@ -27,32 +37,18 @@ class AppTheme {
         scaffoldBackgroundColor: Colors.white,
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ButtonStyle(
-                textStyle:
-                    MaterialStateProperty.all(const TextStyle(color: Colors.white)),
+                textStyle: MaterialStateProperty.all(
+                    const TextStyle(color: Colors.white,fontFamily: 'Nunito')),
                 backgroundColor: MaterialStateProperty.all(Colors.green))),
         primaryColor: primaryColor,
         buttonTheme: const ButtonThemeData(),
         scrollbarTheme: const ScrollbarThemeData()
             .copyWith(thumbColor: MaterialStateProperty.all(secondaryColor)),
-        textTheme: const TextTheme(           displaySmall: TextStyle(
-              fontSize: 13,
-              color: Colors.black,
-            ),
-            bodyLarge: TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.bold,
-            ),
-            displayLarge: TextStyle(
-              fontSize: 36,
-              fontWeight: FontWeight.w700,
-              color: Colors.black,
-            ),
-            displayMedium: TextStyle(
-              fontSize: 14,
-              letterSpacing: 1,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            )),
+        textTheme: const TextTheme(
+            bodyText2: TextStyle(
+          fontSize: 16.5,     height: 1.6,
+          color: Colors.black,
+        )),
         inputDecorationTheme: InputDecorationTheme(
           labelStyle: TextStyle(
               fontSize: 18, color: Colors.grey.shade600, letterSpacing: 0.7),
