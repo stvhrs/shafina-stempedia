@@ -44,19 +44,22 @@ class AppTheme {
         buttonTheme: const ButtonThemeData(),
         scrollbarTheme: const ScrollbarThemeData()
             .copyWith(thumbColor: MaterialStateProperty.all(secondaryColor)),
-        textTheme: const TextTheme(
+        textTheme: const TextTheme(bodyText1:  TextStyle(
+          fontSize: 20,     height: 1.6,
+          color: Colors.black,fontWeight: FontWeight.bold
+        ),
             bodyText2: TextStyle(
           fontSize: 16.5,     height: 1.6,
           color: Colors.black,
         )),
         inputDecorationTheme: InputDecorationTheme(
           labelStyle: TextStyle(
-              fontSize: 18, color: Colors.grey.shade600, letterSpacing: 0.7),
+              fontSize: 15, color: Colors.grey.shade600, letterSpacing: 0.7),
           //        border: InputBorder.none,
 
           contentPadding: const EdgeInsets.only(left: 10, top: 5, bottom: 5),
           filled: true, //<-- SEE HERE
-          fillColor: Colors.grey.shade200,
+          fillColor: Colors.white,
 
           // hintStyle: TextStyle(
           //   color: Colors.grey.shade600,

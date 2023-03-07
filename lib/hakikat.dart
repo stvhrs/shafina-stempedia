@@ -1,4 +1,9 @@
+import 'dart:convert';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:stempedia/commentFrom.dart';
+import 'package:stempedia/listComment.dart';
 import 'package:stempedia/data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -35,19 +40,160 @@ class Hakikat extends StatelessWidget {
           ),
           title: const Text(textAlign: TextAlign.justify, '1:Hakikat'),
         ),
-        body: SingleChildScrollView(
-            padding: const EdgeInsets.only(top: 30),
-            child:
-                Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-              const Expanded(flex: 1, child: SizedBox()),
-              Expanded(
-                flex: 2,
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: hakikatWidgets),
+        body: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Expanded(flex: 2,
+            child: Container(
+              margin: EdgeInsets.only(right: 40),
+              decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 3,
+                  blurRadius: 5,
+                  offset: Offset(0, 3), // changes position of shadow
+                )
+              ]),
+              child: Column(
+                children: [
+                 Container(
+                      width: double.infinity,alignment: Alignment.center,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Topik',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  
+                  Container(
+                    width: double.infinity,
+                    color:
+                        Theme.of(context).colorScheme.primary.withOpacity(0.8),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  right: 16, top: 10, bottom: 10),
+                              child: Icon(
+                                Icons.document_scanner,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              'Bagian 1 : Hakikat',style: TextStyle(color:Colors.white),
+                            
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                   
+                    Container(
+                    width: double.infinity,
+                    color:
+                        Colors.grey.shade200,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  right: 16, top: 10, bottom: 10),
+                              child: Icon(
+                                Icons.document_scanner,
+color: Theme.of(context).colorScheme.primary
+                              ),
+                            ),
+                            Text(
+                              'Bagian 2 : Arti',
+                            
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ), Container(
+                    width: double.infinity,
+                    color:
+                        Colors.white,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  right: 16, top: 10, bottom: 10),
+                              child: Icon(
+                                Icons.document_scanner,
+                                color: Theme.of(context).colorScheme.primary
+                              ),
+                            ),
+                            Text(
+                              'Bagian 2 : Pembelajaran',
+                            
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                   Container(
+                    width: double.infinity,
+                    color:
+                        Colors.grey.shade200,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  right: 16, top: 10, bottom: 10),
+                              child: Icon(
+                                Icons.document_scanner,
+                             color: Theme.of(context).colorScheme.primary
+                              ),
+                            ),
+                            Text(
+                              'Bagian 4 : Penerapan',
+                            
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Spacer(),
+                  IconButton(onPressed: (){}, icon:  Text(
+                              'Daftar Pustaka',style: TextStyle(color: Theme.of(context).colorScheme.primary,fontWeight: FontWeight.bold  ),
+                            
+                            ),)
+                ],
               ),
-              const Expanded(flex: 1, child: SizedBox()),
-            ])),
+            ),
+          ),
+          Expanded(
+            flex: 7,
+            child: SingleChildScrollView(
+                padding: const EdgeInsets.only(top: 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: hakikatWidgets
+                   
+                )),
+          ),
+          Expanded(child: SizedBox())
+        ]),
         floatingActionButton: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ElevatedButton.icon(

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:stempedia/commentFrom.dart';
+
+import 'listComment.dart';
 
 List<Widget> hakikatWidgets = [
   const Text(
@@ -72,4 +75,18 @@ List<Widget> hakikatWidgets = [
   const Text(
       textAlign: TextAlign.justify,
       '    Berdasarkan beberapa pendapat diatas, STEM dapat didefinisikan dalam berbagai sudut pandang. STEM dapat dianggap sebagai pendekatan yang menerapkan disiplin ilmu STEM secara terpisah, mengintegrasikan setidaknya dua disiplin ilmu STEM, dan juga dapat didefinisikan sebagai integrasi antara 4 disiplin ilmu STEM yang saling berkaitan satu sama lain. Dengan kata lain, STEM dapat dianggap sebagai ilmu disiplin terpusat, multidisiplin, bahkan dapat menjadi ilmu interdisiplin. \n')
+ , Row(mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                         
+                          Text(
+                            'Diskusi',
+                            style: TextStyle(
+                              fontSize: 25,fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        
+                        ],
+                      ),Divider(),
+                      Commnet('hakikat'),
+                      CommentFrom('hakikat')
 ];
