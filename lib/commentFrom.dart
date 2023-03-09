@@ -1,7 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CommentFrom extends StatefulWidget {
   final String topik;
@@ -14,7 +12,7 @@ class CommentFrom extends StatefulWidget {
 }
 
 class _CommentFromState extends State<CommentFrom> {
-  TextEditingController _nama = TextEditingController();
+  final TextEditingController _nama = TextEditingController();
   final TextEditingController _comment = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -30,7 +28,7 @@ class _CommentFromState extends State<CommentFrom> {
                   onChanged: (v) {
                     setState(() {});
                   },
-                  decoration: InputDecoration(labelText: 'Nama')),
+                  decoration: const InputDecoration(labelText: 'Nama')),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -39,7 +37,7 @@ class _CommentFromState extends State<CommentFrom> {
                 onChanged: ((value) {
                   setState(() {});
                 }),
-                decoration: InputDecoration(labelText: 'Comment'),
+                decoration: const InputDecoration(labelText: 'Comment'),
                 maxLines: 4,
               ),
             ),
@@ -56,11 +54,11 @@ class _CommentFromState extends State<CommentFrom> {
                       'date': DateTime.now().toIso8601String()
                     });
                     ScaffoldMessenger.of(context)
-                        .showSnackBar(SnackBar(content: Text('Reply terkirim')));
+                        .showSnackBar(const SnackBar(content: Text('Reply terkirim')));
                     _nama.text = '';
                     _comment.text = '';
                   },
-                  child: Text(
+                  child: const Text(
                     'Comment',
                     style: TextStyle(
                         fontSize: 15,

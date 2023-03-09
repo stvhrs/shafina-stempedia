@@ -1,7 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ReplyFrom extends StatefulWidget {
   final String docId;
@@ -13,15 +11,47 @@ class ReplyFrom extends StatefulWidget {
 }
 
 class _ReplyFromState extends State<ReplyFrom> {
-  TextEditingController _nama = TextEditingController();
+  bool _reply=false;
+  final TextEditingController _nama = TextEditingController();
   final TextEditingController _comment = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20),
-      child: Column(
+      padding: const EdgeInsets.only(top: 5),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
+             !_reply?  Padding(
+                  padding: const EdgeInsets.only(top:8.0),
+                  child: InkWell(
+                      onTap: () {
+                        _reply = true;
+                        setState(() {});
+                      },
+                      child: Text(
+                        'Reply',
+                        style:
+                            TextStyle(color: Theme.of(context).colorScheme.primary,fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                ):
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: InkWell(
+                      onTap: () {
+                        _reply = false;
+                        setState(() {});
+                      },
+                      child: const Text(
+                        'Cancel',
+                        style:
+                            TextStyle(color: Colors.red,fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                ),
+               
+              
+            
+        !_reply? const SizedBox():   Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
                 controller: _nama,
@@ -30,9 +60,9 @@ class _ReplyFromState extends State<ReplyFrom> {
                     
                   });
                 },
-                decoration: InputDecoration(labelText: 'Nama')),
+                decoration: const InputDecoration(labelText: 'Nama')),
           ),
-          Padding(
+           !_reply? const SizedBox():  Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               controller: _comment,
@@ -41,11 +71,11 @@ class _ReplyFromState extends State<ReplyFrom> {
                   
                 });
               }),
-              decoration: InputDecoration(labelText: 'Comment'),
+              decoration: const InputDecoration(labelText: 'Comment'),
               maxLines: 4,
             ),
           ),
-          Padding(
+          !_reply? const SizedBox():   Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
                 onPressed: () {
@@ -58,12 +88,15 @@ class _ReplyFromState extends State<ReplyFrom> {
                       .doc(widget.docId)
                       .collection('reply')
                       .add({'nama': _nama.text, 'comment': _comment.text,'date':DateTime.now().toIso8601String()});
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Reply terkirim')));
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Reply terkirim')));
                       _nama.text='';
                         _comment.text='';
-                 
+                 _reply=false;
+                 setState(() {
+                   
+                 });
                 },
-                child: Text(
+                child: const Text(
                   'Reply',
                   style: TextStyle(
                       fontSize: 15,

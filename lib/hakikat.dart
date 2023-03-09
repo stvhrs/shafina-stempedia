@@ -1,9 +1,5 @@
-import 'dart:convert';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:stempedia/commentFrom.dart';
-import 'package:stempedia/listComment.dart';
 import 'package:stempedia/data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -27,44 +23,45 @@ class Hakikat extends StatelessWidget {
               Navigator.popUntil(context, ModalRoute.withName('/'));
             },
             child: Container(
-              padding: EdgeInsets.all(8), // Border width
+              padding: const EdgeInsets.all(8), // Border width
 
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10), // Image border
                 child: SizedBox.fromSize(
-                  size: Size.fromRadius(48), // Image radius
+                  size: const Size.fromRadius(48), // Image radius
                   child: Image.asset('image/logo.jpeg', fit: BoxFit.cover),
                 ),
               ),
             ),
           ),
-          title: const Text(textAlign: TextAlign.justify, '1:Hakikat'),
+          title: const Text(textAlign: TextAlign.justify, '1:Hakikat STEM'),
         ),
         body: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Expanded(flex: 2,
             child: Container(
-              margin: EdgeInsets.only(right: 40),
+              margin: const EdgeInsets.only(right: 40),
               decoration: BoxDecoration(color: Colors.white, boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.5),
                   spreadRadius: 3,
                   blurRadius: 5,
-                  offset: Offset(0, 3), // changes position of shadow
+                  offset: const Offset(0, 3), // changes position of shadow
                 )
               ]),
               child: Column(
                 children: [
-                 Container(
-                      width: double.infinity,alignment: Alignment.center,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Topik',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
+                 Container(color:Colors.orange,
+                    width: double.infinity,
+                    alignment: Alignment.center,
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'Topik',
+                        style: TextStyle(fontWeight: FontWeight.bold,color:Colors.white),
                       ),
                     ),
-                  
+                  )
+                  ,
                   Container(
                     width: double.infinity,
                     color:
@@ -74,18 +71,20 @@ class Hakikat extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
-                          children: [
+                          children: const [
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   right: 16, top: 10, bottom: 10),
                               child: Icon(
                                 Icons.document_scanner,
                                 color: Colors.white,
                               ),
                             ),
-                            Text(
-                              'Bagian 1 : Hakikat',style: TextStyle(color:Colors.white),
-                            
+                            Expanded(
+                              child: Text(
+                                'Hakikat STEM',style: TextStyle(color:Colors.white),
+                              
+                              ),
                             ),
                           ],
                         ),
@@ -98,7 +97,7 @@ class Hakikat extends StatelessWidget {
                     color:
                         Colors.grey.shade200,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {Navigator.pushNamed(context, '/arti');},
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -111,9 +110,11 @@ class Hakikat extends StatelessWidget {
 color: Theme.of(context).colorScheme.primary
                               ),
                             ),
-                            Text(
-                              'Bagian 2 : Arti',
-                            
+                            const Expanded(
+                              child: Text(
+                                'Arti Penting: Mengapa  STEM Perlu Dilakukan',
+                              
+                              ),
                             ),
                           ],
                         ),
@@ -124,7 +125,9 @@ color: Theme.of(context).colorScheme.primary
                     color:
                         Colors.white,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, '/pembelajaran');
+                      },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -137,9 +140,11 @@ color: Theme.of(context).colorScheme.primary
                                 color: Theme.of(context).colorScheme.primary
                               ),
                             ),
-                            Text(
-                              'Bagian 2 : Pembelajaran',
-                            
+                            const Expanded(
+                              child: Text(
+                                'Pembelajaran Berbasis STEM pada Jenjang SMP',
+                              
+                              ),
                             ),
                           ],
                         ),
@@ -151,7 +156,10 @@ color: Theme.of(context).colorScheme.primary
                     color:
                         Colors.grey.shade200,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () 
+                      {
+                        Navigator.pushNamed(context, '/penerapan');
+                      },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -164,17 +172,23 @@ color: Theme.of(context).colorScheme.primary
                              color: Theme.of(context).colorScheme.primary
                               ),
                             ),
-                            Text(
-                              'Bagian 4 : Penerapan',
-                            
+                            const Expanded(
+                              child: Text(
+                                'Penerapan Pembelajaran berbasis STEM',
+                              
+                              ),
                             ),
                           ],
                         ),
                       ),
                     ),
                   ),
-                  Spacer(),
-                  IconButton(onPressed: (){}, icon:  Text(
+                  const Spacer(),
+                  IconButton(onPressed: (){
+
+
+                     Navigator.pushNamed(context, '/daftar_pustaka');
+                  }, icon:  Text(
                               'Daftar Pustaka',style: TextStyle(color: Theme.of(context).colorScheme.primary,fontWeight: FontWeight.bold  ),
                             
                             ),)
@@ -192,7 +206,7 @@ color: Theme.of(context).colorScheme.primary
                    
                 )),
           ),
-          Expanded(child: SizedBox())
+          const Expanded(child: SizedBox())
         ]),
         floatingActionButton: Padding(
           padding: const EdgeInsets.all(8.0),
