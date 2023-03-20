@@ -65,7 +65,7 @@ return 'Submit Evaluasi';
                       backgroundColor: MaterialStateProperty.all(
                           Theme.of(context).colorScheme.secondary)),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/hakikat');
+                     Navigator.pushNamed(context, '/hakikat');
                   },
                   label: const Icon(Icons.menu_book_rounded),
                 ),
@@ -75,7 +75,7 @@ return 'Submit Evaluasi';
             child:  SizedBox(height:  MediaQuery.of(context).size.height *2,
           child: Column(
               children: [
-                Expanded(flex: 2,
+                Expanded(flex: 3,
                   child: Stack(
                     children: [
                       Transform.scale(
@@ -97,7 +97,7 @@ return 'Submit Evaluasi';
                           width: MediaQuery.of(context).size.width / 2.1,
                           child: const Text(
                             textAlign: TextAlign.justify,
-                            'STEMPEDIA ID - Integrated STEM e-module merupakan platform belajar STEM yang dapat diunakan oleh calon guru IPA untuk mempelajari bagaimana STEM dapat diterapkan dalam pembelajaran IPA. Platform ini berisi tentang hakikat STEM hingga berbagai contoh penerapan STEM dalam pembelajaran IPA. Melalui portal STEMPEDIA ID, guru maupun calon guru dapat menambahkan referensi, melakukan diskusi dan membagikan pengalman tentang penerapan STEM dalam pembelajaran IPA pada topik yang telah disediakan. Modul ini diharapkan dapat membantu meningkatkan kreativitas dan sikap terhadap STEM bagi calon guru IPA. Selain itu, melalui modul ini, calon guru IPA diharapkan dapat',
+                            'STEMPEDIA ID - Integrated STEM e-module merupakan platform belajar STEM yang dapat digunakan oleh calon guru IPA untuk mempelajari bagaimana STEM dapat diterapkan dalam pembelajaran IPA. Platform ini berisi tentang hakikat STEM hingga berbagai contoh penerapan STEM dalam pembelajaran IPA. Melalui portal STEMPEDIA ID, guru maupun calon guru dapat menambahkan referensi, melakukan diskusi dan membagikan pengalman tentang penerapan STEM dalam pembelajaran IPA pada topik yang telah disediakan. Modul ini diharapkan dapat membantu meningkatkan kreativitas dan sikap terhadap STEM bagi calon guru IPA. Selain itu, melalui modul ini, calon guru IPA diharapkan dapat',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
@@ -109,11 +109,11 @@ return 'Submit Evaluasi';
                     ],
                   ),
                 ),
-                Expanded(flex: 1,
+                Expanded(flex: 2,
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
-                    margin: const EdgeInsets.only(top: 5),
-                    child: Card(
+                 
+                    child: Card(margin: EdgeInsets.zero,
                       surfaceTintColor: Theme.of(context).colorScheme.secondary,
                       color: Theme.of(context).colorScheme.secondary,
                       child: Padding(
@@ -122,7 +122,7 @@ return 'Submit Evaluasi';
                             surfaceTintColor:
                                 Theme.of(context).colorScheme.secondary,
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.only(bottom:25,left: 50,right: 50,top:15),
                               child: Column(
                                 children: [
                                   Text(
@@ -130,9 +130,40 @@ return 'Submit Evaluasi';
                                     style: Theme.of(context).textTheme.bodyText1,
                                   ),
                                   const Text(
-                                      'Pengguna diharapkan mengikuti petunjuk penggunaan modul agar memperoleh hasil belajar secara maksimal. Petunjuk penggunaan e-module STEMPEDIA ID diuraikan sebagai berikut:'),
-                                  const Text(
-                                      '1. Bacalah deskripsi singkat e-module dan tujuan pembelajaran yang terdapat pada e-module.\n2. Bacalah panduan penggunaan e-module dan daftar isi dengan teliti.\n3. Pahami setiap materi dan konsep dasar pada masing-masing topik. Apabila terdapat materi yang kurang jelas untuk dipahami, mahasiswa dapat bertanya pada pengampu mata kuliah yang bersangkutan atau dapat ditanyakan pada kolom diskusi setiap bagian akhir topik. \n4. Kerjakan setiap tugas yang tersedia untuk mengetahui seberapa besar pemahaman terhadap topik yang telah dibahas.\n'),
+                                      '\nPengguna diharapkan mengikuti petunjuk penggunaan modul agar memperoleh hasil belajar secara maksimal. Petunjuk penggunaan e-module STEMPEDIA ID diuraikan sebagai berikut:\n'),
+                                  Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [Text('1. '),
+                                      const Text(
+                                          'Bacalah deskripsi singkat e-module dan tujuan pembelajaran yang terdapat pada e-module'
+                                          )
+                                    ],
+                                  ),
+                                    Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [Text('2. '),
+                                      const Text(
+                                          'Bacalah panduan penggunaan e-module dan daftar isi dengan teliti'
+                                          )
+                                    ],
+                                  ),
+                                    Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [Text('3. '),
+                                      Expanded(
+                                        child: const Text(
+                                            'Pahami setiap materi dan konsep dasar pada masing-masing topik. Apabila terdapat materi yang kurang jelas untuk dipahami, mahasiswa dapat bertanya pada pengampu mata kuliah yang bersangkutan atau dapat ditanyakan pada kolom diskusi setiap bagian akhir topik.'
+                                            ),
+                                      )
+                                    ],
+                                  ),
+                                    Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [Text('4. '),
+                                      const Text(
+                                          'Kerjakan setiap tugas yang tersedia untuk mengetahui seberapa besar pemahaman terhadap topik yang telah dibahas'
+                                          )
+                                    ],
+                                  ),
+
+
+
                                 ],
                               ),
                             )),
@@ -140,8 +171,8 @@ return 'Submit Evaluasi';
                     ),
                   ),
                 ),
-                Expanded(flex: 2,
-                  child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                Expanded(flex: 4,
+                  child: Row(crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center,
                     children: List.generate(
                       4,
                         (index) => Container(margin: const EdgeInsets.only(top: 30,right: 10,left: 10,bottom: 50),decoration:BoxDecoration(borderRadius: BorderRadius.circular(15)),

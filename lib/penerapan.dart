@@ -70,7 +70,7 @@ class Penerapan extends StatelessWidget {
                     width: double.infinity,
                     color: Colors.white,
                     child: InkWell(
-                      onTap: () {Navigator.pushNamed(context, '/hakikat');},
+                      onTap: () { Navigator.popUntil(context, ModalRoute.withName('/hakikat'));},
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(

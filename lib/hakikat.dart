@@ -21,6 +21,7 @@ class Hakikat extends StatelessWidget {
           leading: InkWell(
             onTap: () {
               Navigator.popUntil(context, ModalRoute.withName('/'));
+         
             },
             child: Container(
               padding: const EdgeInsets.all(8), // Border width

@@ -69,7 +69,7 @@ class Arti extends StatelessWidget {
                     color: Colors.grey.shade200,
                     child: InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, '/hakikat');
+                          Navigator.popUntil(context, ModalRoute.withName('/hakikat'));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),

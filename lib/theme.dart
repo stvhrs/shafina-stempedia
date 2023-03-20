@@ -1,21 +1,7 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
-class CustomRoute<T> extends MaterialPageRoute<T> {
-  CustomRoute({WidgetBuilder? builder, RouteSettings? settings})
-      : super(builder: builder!, settings: settings);
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    var begin = const Offset(1.0, 0.0);
-    var end = Offset.zero;
-    var curve = Curves.ease;
-    var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-    return SlideTransition(
-      position: animation.drive(tween),
-      child: child,
-    );
-  }
-}
 
 class CustomRoute2<T> extends MaterialPageRoute<T> {
   CustomRoute2({WidgetBuilder? builder, RouteSettings? settings})
@@ -29,19 +15,66 @@ class CustomRoute2<T> extends MaterialPageRoute<T> {
     );
   }
 }
+class CustomRoute<T> extends MaterialPageRoute<T> {
+  CustomRoute({
+    required WidgetBuilder builder,
+    required RouteSettings settings,
+  }) : super(
+          builder: builder,
+          settings: settings,
+        );
 
+  @override
+  Widget buildTransitions(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+    
+    return FadeTransition(
+      opacity: animation,
+      child: child,
+    );
+  }
+}
+
+class CustomPageTransitionBuilder extends PageTransitionsBuilder {
+ @override
+  Widget buildTransitions<T>(
+    PageRoute<T> route,
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+     const begin = Offset(0.1, 0.0);
+      const end = Offset.zero;
+      const curve = Curves.linear;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+    if (route.settings.name=='/hakikat') {
+      return  SlideTransition(
+     position:animation.drive(tween),
+      child: child,
+    );;
+    }
+    return child;
+    
+  }
+}
 class AppTheme {
   AppTheme();
   static Color primaryColor = const Color.fromARGB(255, 75, 84, 167);
   static Color secondaryColor = const Color.fromARGB(255, 251, 186, 5);
   static ThemeData getAppThemeData() {
     return ThemeData(
-        pageTransitionsTheme: const PageTransitionsTheme(builders: {
-          TargetPlatform.android: CupertinoPageTransitionsBuilder(),
-          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-          TargetPlatform.windows: CupertinoPageTransitionsBuilder(),
-          TargetPlatform.macOS: CupertinoPageTransitionsBuilder(),
-          TargetPlatform.linux: CupertinoPageTransitionsBuilder(),
+        pageTransitionsTheme:  PageTransitionsTheme(builders: {
+          TargetPlatform.android: CustomPageTransitionBuilder(),
+          TargetPlatform.iOS: CustomPageTransitionBuilder(),
+          TargetPlatform.windows: CustomPageTransitionBuilder(),
+          TargetPlatform.macOS: CustomPageTransitionBuilder(),
+          TargetPlatform.linux: CustomPageTransitionBuilder(),
         }),
         appBarTheme: AppBarTheme(
           backgroundColor: primaryColor,

@@ -4,7 +4,7 @@ import 'package:stempedia/comment.dart';
 
 class Commnet extends StatelessWidget {
   final String id;
-   Commnet(this.id);
+   const Commnet(this.id);
 
 
   

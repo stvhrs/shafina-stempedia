@@ -95,10 +95,51 @@ class _DaftarPustakaState extends State<DaftarPustaka> {
     print(txt.length);
     print(link.length);
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Daftar Pustaka'),
-        automaticallyImplyLeading: false,
-      ),
+      appBar:  AppBar(  actions: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton.icon(
+                  icon: const Text(
+                    textAlign: TextAlign.justify,
+                    'Topik',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1,
+                        fontSize: 15),
+                  ),
+                  style: ButtonStyle(
+                      shadowColor: MaterialStateProperty.all(
+                          Theme.of(context).colorScheme.primary),
+                      backgroundColor: MaterialStateProperty.all(
+                          Theme.of(context).colorScheme.secondary)),
+                  onPressed: () {
+                     Navigator.pushNamed(context, '/hakikat');
+                  },
+                  label: const Icon(Icons.menu_book_rounded),
+                ),
+              )
+            ],
+          automaticallyImplyLeading: false,
+          leadingWidth: MediaQuery.of(context).size.width / 10,
+          leading: InkWell(
+            onTap: () {
+              Navigator.popUntil(context, ModalRoute.withName('/'));
+         
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8), // Border width
+
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10), // Image border
+                child: SizedBox.fromSize(
+                  size: const Size.fromRadius(48), // Image radius
+                  child: Image.asset('image/logo.jpeg', fit: BoxFit.cover),
+                ),
+              ),
+            ),
+          ),
+          title: const Text(textAlign: TextAlign.justify, 'Daftar Pustaka'),
+        ),
       body: Center(
           child: SizedBox(
         width: MediaQuery.of(context).size.width * 0.7,

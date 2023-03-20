@@ -7,12 +7,13 @@ import 'package:stempedia/home.dart';
 import 'package:stempedia/pembelajaran.dart';
 import 'package:stempedia/penerapan.dart';
 import 'package:stempedia/theme.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() async {
   setPathUrlStrategy();
- WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: const FirebaseOptions(
@@ -39,11 +40,11 @@ class MyApp extends StatelessWidget {
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/hakikat': (context) => Hakikat(),
-        '/': (context) => const Home(),
+        '/': (context) => Home(),
         '/arti': (context) => Arti(),
         '/pembelajaran': (context) => Pembelajaran(),
         '/penerapan': (context) => Penerapan(),
-        '/daftar_pustaka': (context) => const DaftarPustaka(),
+        '/daftar_pustaka': (context) => DaftarPustaka(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         // '/second': (context) => const SecondScreen(),
       },
