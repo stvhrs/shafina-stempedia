@@ -94,13 +94,14 @@ return 'Submit Evaluasi';
                         left: 20,
                         top: 60,
                         child: SizedBox(
-                          width: MediaQuery.of(context).size.width / 2.1,
+                          width: MediaQuery.of(context).size.width / 1.6,
                           child: const Text(
                             textAlign: TextAlign.justify,
-                            'STEMPEDIA ID - Integrated STEM e-module merupakan platform belajar STEM yang dapat digunakan oleh calon guru IPA untuk mempelajari bagaimana STEM dapat diterapkan dalam pembelajaran IPA. Platform ini berisi tentang hakikat STEM hingga berbagai contoh penerapan STEM dalam pembelajaran IPA. Melalui portal STEMPEDIA ID, guru maupun calon guru dapat menambahkan referensi, melakukan diskusi dan membagikan pengalman tentang penerapan STEM dalam pembelajaran IPA pada topik yang telah disediakan. Modul ini diharapkan dapat membantu meningkatkan kreativitas dan sikap terhadap STEM bagi calon guru IPA. Selain itu, melalui modul ini, calon guru IPA diharapkan dapat',
+                                                    'STEMPEDIA ID - Integrated STEM e-module merupakan platform belajar STEM yang dapat digunakan oleh calon guru IPA untuk mempelajari bagaimana STEM dapat diterapkan dalam pembelajaran IPA. Platform ini berisi tentang hakikat STEM hingga berbagai contoh penerapan STEM dalam pembelajaran IPA. Melalui portal STEMPEDIA ID, guru maupun calon guru dapat menambahkan referensi, melakukan diskusi dan membagikan pengalman tentang penerapan STEM dalam pembelajaran IPA pada topik yang telah disediakan. Modul ini diharapkan dapat membantu meningkatkan kreativitas dan sikap terhadap STEM bagi calon guru IPA. Selain itu, melalui modul ini, calon guru IPA diharapkan dapat\n\n1. Menguasai konsep STEM dan arti penting STEM dalam pendidikan IPA.\n2. Memahami model-model pembelajaran yang dapat diterapkan dengan pendekatan STEM.\n3. Menguasai dan merancang sumber belajar berbasis STEM.',
+                            // 'STEMPEDIA ID - Integrated STEM e-module merupakan platform belajar STEM yang dapat digunakan oleh calon guru IPA untuk mempelajari bagaimana STEM dapat diterapkan dalam pembelajaran IPA. Platform ini berisi tentang hakikat STEM hingga berbagai contoh penerapan STEM dalam pembelajaran IPA. Melalui portal STEMPEDIA ID, guru maupun calon guru dapat menambahkan referensi, melakukan diskusi dan membagikan pengalman tentang penerapan STEM dalam pembelajaran IPA pada topik yang telah disediakan. Modul ini diharapkan dapat membantu meningkatkan kreativitas dan sikap terhadap STEM bagi calon guru IPA. Selain itu, melalui modul ini, calon guru IPA diharapkan dapat',
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 20,
+                                fontSize: 17,
                                 letterSpacing: 1.1,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -172,19 +173,23 @@ return 'Submit Evaluasi';
                   ),
                 ),
                 Expanded(flex: 4,
-                  child: Row(crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center,
-                    children: List.generate(
-                      4,
-                        (index) => Container(margin: const EdgeInsets.only(top: 30,right: 10,left: 10,bottom: 50),decoration:BoxDecoration(borderRadius: BorderRadius.circular(15)),
-                                width: MediaQuery.of(context).size.width * 0.2,
-                                child:  Column(
-                                  children: [ Text(getCaption(index),style: TextStyle(color:Theme.of(context).colorScheme.primary,fontWeight: FontWeight.bold,fontSize: 20),),
-                                    Image.asset('image/flow${index+1}.png',fit: BoxFit.cover,),
-                                   
-                                  ],
-                                ))),
+                  child: Column(
+                    children: [
+                      Row(crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(
+                          4,
+                            (index) => Container(margin: const EdgeInsets.only(top: 30,right: 10,left: 10,bottom: 50),decoration:BoxDecoration(borderRadius: BorderRadius.circular(15)),
+                                    width: MediaQuery.of(context).size.width * 0.2,
+                                    child:  Column(
+                                      children: [ Text(getCaption(index),style: TextStyle(color:Theme.of(context).colorScheme.primary,fontWeight: FontWeight.bold,fontSize: 20),),
+                                        Image.asset('image/t${index+1}.png',fit: BoxFit.cover,),
+                                       
+                                      ],
+                                    ))),
+                      ), Image.asset('image/id.jpg')
+                    ],
                   ),
-                )
+                ),     
               ],
             ),
           ),

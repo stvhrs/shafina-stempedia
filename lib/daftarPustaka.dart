@@ -46,8 +46,12 @@ class _DaftarPustakaState extends State<DaftarPustaka> {
       'Syukri, M., Halim, L., & Meerah, T. S. M. (2013). Pendidikan STEM dalam Enterpreunal Science Thinking “ ESciT ”: Satu Perkongsian Pengalaman dari UKM untuk Aceh. Academy Of IIlamic Studies, University Of Malaya, Kuala Lumpur, March, 105–112. ',
       'Ung, S. B. (2019). Exploring STEM competences for the 21st century. In-Progress Reflection No. 30, 30, 1–53. unesdoc.unesco.org/in/rest/anno',
       'Wardani, G. A. K. (2019). Hakikat Prinsip Dasar Pendidikan Dasar. 1–66',
+     
+     
+     'Wichaidit, S., Assapun, S., Putwattana, N., Joongpan, C., Tabthong, S., & Chowicharat, E. (2019). The STEM flower: The designing tool for effective STEM instruction. AIP Conference Proceedings, 2081(March). https://doi.org/10.1063/1.5094013'
       'Zhong, B., Liu, X., Ke Q., & Wang, F. (2022). What should a Chinese top-level design in STEM Education look like?, 9 Humanities and Social Sciences Communications 1 (2022). https://doi.org/10.1057/s41599-022-01279-1 ',
-      'Zuryanty, Hamimah, Kenedi, A. K., & Helsa, Y. (2020). Pembelajaran STEM Di Sekolah Dasar. Deepublish.'
+      'Zuryanty, Hamimah, Kenedi, A. K., & Helsa, Y. (2020). Pembelajaran STEM Di Sekolah Dasar. Deepublish.',
+      
     ];
     List<String> link = [
       'http://repository.iainponorogo.ac.id/489/',
@@ -83,6 +87,7 @@ class _DaftarPustakaState extends State<DaftarPustaka> {
       'https://www.academia.edu/28202744/Pendidikan_STEM_dalam_Entrepreneurial_Science_Thinking_ESciT_Satu_Perkongsian_Pengalaman_dari_UKM_untuk_ACEH',
       'https://unesdoc.unesco.org/ark:/48223/pf0000368485',
       'http://repository.ut.ac.id/4263/1/MPDR5101-M1.pdf',
+      'https://doi.org/10.1063/1.5094013',
       'https://www.nature.com/articles/s41599-022-01279-1',
       'https://books.google.co.id/books?id=zaAaEAAAQBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false'
     ];
@@ -97,8 +102,12 @@ class _DaftarPustakaState extends State<DaftarPustaka> {
     return Scaffold(
       appBar:  AppBar(  actions: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton.icon(
+                padding:  EdgeInsets.all(8.0),
+                child:MediaQuery.of(context).size.width<1000?IconButton(
+                  icon:  Icon(Icons.home,color: Colors.white,),  onPressed: () {
+                     Navigator.pushNamed(context, '/hakikat');
+                  },
+                ): ElevatedButton.icon(
                   icon: const Text(
                     textAlign: TextAlign.justify,
                     'Topik',
@@ -121,7 +130,11 @@ class _DaftarPustakaState extends State<DaftarPustaka> {
             ],
           automaticallyImplyLeading: false,
           leadingWidth: MediaQuery.of(context).size.width / 10,
-          leading: InkWell(
+          leading: MediaQuery.of(context).size.width<100?IconButton(
+                  icon: const Icon(Icons.arrow_back, color:Colors.white,),  onPressed: () {
+                     Navigator.pushNamed(context, '/hakikat');
+                  },
+                ): InkWell(
             onTap: () {
               Navigator.popUntil(context, ModalRoute.withName('/'));
          
@@ -142,7 +155,7 @@ class _DaftarPustakaState extends State<DaftarPustaka> {
         ),
       body: Center(
           child: SizedBox(
-        width: MediaQuery.of(context).size.width * 0.7,
+        width:MediaQuery.of(context).size.width<1000?double.infinity: MediaQuery.of(context).size.width * 0.7,
         child: ListView(
           children: List.generate(
               txt.length,

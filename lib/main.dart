@@ -4,13 +4,15 @@ import 'package:stempedia/arti.dart';
 import 'package:stempedia/daftarPustaka.dart';
 import 'package:stempedia/hakikat.dart';
 import 'package:stempedia/home.dart';
+import 'package:stempedia/hpHome.dart';
+import 'package:stempedia/hpModul/modul_base.dart';
 import 'package:stempedia/pembelajaran.dart';
 import 'package:stempedia/penerapan.dart';
 import 'package:stempedia/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:url_strategy/url_strategy.dart';
-
+import'dart:io' show Platform;
 void main() async {
   setPathUrlStrategy();
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,13 +36,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       initialRoute: '/',
       debugShowCheckedModeBanner: false,
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
-        '/hakikat': (context) => Hakikat(),
-        '/': (context) => Home(),
+        '/hakikat': (context) =>
+            MediaQuery.of(context).size.width < 1000 ? Hphakikat() : Hakikat(),
+        '/': (context) =>
+            MediaQuery.of(context).size.width < 1000 ? HpHome() : Home(),
         '/arti': (context) => Arti(),
         '/pembelajaran': (context) => Pembelajaran(),
         '/penerapan': (context) => Penerapan(),

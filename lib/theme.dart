@@ -68,7 +68,7 @@ class AppTheme {
   static Color primaryColor = const Color.fromARGB(255, 75, 84, 167);
   static Color secondaryColor = const Color.fromARGB(255, 251, 186, 5);
   static ThemeData getAppThemeData() {
-    return ThemeData(
+    return ThemeData(drawerTheme: DrawerThemeData(),iconTheme: IconThemeData(color: Colors.white),
         pageTransitionsTheme:  PageTransitionsTheme(builders: {
           TargetPlatform.android: CustomPageTransitionBuilder(),
           TargetPlatform.iOS: CustomPageTransitionBuilder(),
@@ -96,11 +96,11 @@ class AppTheme {
             backgroundColor: Colors.white,
             surfaceTintColor: Colors.red,
             disabledColor: Colors.greenAccent,
-            elevation: 0,
+            elevation: 0, 
             selectedColor: Colors.pink,
             checkmarkColor: Colors.green,
             showCheckmark: false,
-            deleteIconColor: Colors.amber,
+            deleteIconColor: Color.fromRGBO(255, 193, 7, 1),
             secondarySelectedColor: primaryColor,
             shadowColor: Colors.yellow,
             selectedShadowColor: Colors.black),

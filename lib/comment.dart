@@ -28,9 +28,11 @@ class Komen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    data.data()['nama'],
-                    style: Theme.of(context).textTheme.bodyText1,
+                  Expanded(
+                    child: Text(
+                      data.data()['nama'],
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
                   ),
                   Text(DateFormat('HH:mm dd/MM/yyyy')
                       .format(DateTime.parse(DateTime.now().toIso8601String())))
@@ -41,8 +43,10 @@ class Komen extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Text(
-                        data.data()['comment'],
+                      Expanded(
+                        child: Text(
+                          data.data()['comment'],
+                        ),
                       ),
                     ],
                   ),
@@ -80,11 +84,13 @@ class Komen extends StatelessWidget {
                                         children: [
                                           Row(
                                             children: [
-                                              Text(
-                                                snapshot.data!.docs[index]
-                                                    .data()['nama'],
-                                                style: const TextStyle(
-                                                    fontWeight: FontWeight.bold),
+                                              Expanded(
+                                                child: Text(
+                                                  snapshot.data!.docs[index]
+                                                      .data()['nama'],
+                                                  style: const TextStyle(
+                                                      fontWeight: FontWeight.bold),
+                                                ),
                                               ),
                                             ],
                                           ),

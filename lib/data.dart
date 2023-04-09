@@ -239,7 +239,7 @@ Text(textAlign:TextAlign.justify,'2.  Solution Centis\n Solution centris memilik
 
 
 
-,Image.asset('n6.png'),
+,Image.asset('image/n6.png'),
 Text(textAlign:TextAlign.justify,'Berikut ini disajikan contoh penerapan desain solution centric:\n'),
 Row(children: [Image.asset('image/n77.jpg',width: 150),Expanded(child: Text(textAlign:TextAlign.justify,'Saat ini, sudah terdapat suntikan insulin yang digunakan masyarakat. Namun, terdapat beberapa kekurangan dari desain suntikan tersebut karena jarum suntik yang terlalu panjang dan cukup menyulitkan pengguna. Disini, teman-teman guru dapat meminta siswa untuk mengevaluasi desain suntikan insulin dan membuat desain baru berdasarkan evaluasi terhadap desain yang lama agar menghasilkan solusi (suntikan) yang lebih baik.'))],),
 Text(textAlign:TextAlign.justify,'3.  User Centris'),
@@ -252,11 +252,41 @@ Text(textAlign:TextAlign.justify,'User centric memiliki beberapa karakteristik d
   const Text(textAlign:TextAlign.justify,
       
       '\nSTEM sebagai pendekatan pembelajaran dapat dilaksanakan dengan desain proses engineering. Apa yang dimaksud dengan desain proses engineering? Bagaimana cara menerapkannya? Mari kita pelajari\n'),
+  Text('The STEM Flower\n',style: big,),
+  Text('Pendidikan STEM sebagai salah satu pendekatan pembelajaran yang menghapuskan batasan antara 4 disiplin dan mengintegrasikannya kedalam dunia nyata, tepat, dan pengalaman belajar yang relevan bagi siswa. STEM harus relevan dengan siswa, fokus pada pengalaman siswa, dan mengikat siswa pada permasalahan dunia nyata. Wichaidit et al., (2019) menyatakan bahwa terdapat tiga kunci utama yang harus ada dalam pembelajaran, antara lain tujuan pembelajaran, aktivitas pembelajaran, dan umpan balik & penilaian. Salah satu desain pembelajaran STEM yang telah diterapkan adalah STEM Flower.\n'),
+  Text('STEM Flower merupakan salah satu alat yang dapat digunakan untuk mendesain pembelajaran STEM dalam satu halaman (Wichaidit et al., 2019). Hasil Belajar (learning outcomes) terletak pada bagian putik karena merupakan elemen inti dari pembelajaran, berupa capaian atau luaran yang harus dicapai dalam pembelajaran. Kata kunci (keyword) dan masalah atau situasi (generate problem) diletakkan pada dua mahkota bunga pertama karena digunakan sebagai petunjuk untuk menentukan aktivitas pembelajaran. Selanjutnya, prosedur pembelajaran (learning procedure) meliputi aktivitas pembelajaran. Didalamnya, perlu memuat waktu pelaksanaan, target siswa, sarana prasarana, dan tempat pelaksanaan. Selanjutnya, perlu dituliskan pula pengalaman belajar yang mungkin akan didapatkan oleh siswa untuk mengetahui apakah aktivitas yang akan dilakukan tersebut dapat mencapai tujuan pembelajaran. Mahkota terakhir berisi asesmen karena merupakan feedback dari pembelajaran. namun, asesmen tidak selalu dilaksanakan pada akhir pembelajaran, dapat juga dilaksanakan dalam proses pembelajaran. Berikut ini merupakan desain the STEM Flower.\n'),
+  Image.asset('image/f1.png'),
+  Text('Berikut ini merupakan deskripsi masing-masing komponen:'),
+  Text('1.  Learning outcomes atau hasil belajar meliputi kompetensi, pengetahuan, sikap, dan keterampilan. Untuk membantu merumuskan learning outcomes, kita dapat menggunakan pertanyaan-pertanyaan berikut:\n')
+,  Text('a.  Apa aplikasi dari konten tersebut?'),
+  Text('b.  Apabila tidak ada penemuan……. di bumi, atau apabila ……. hilang, apa yang akan terjadi? (menentukan arti penting dari……)'),
+  Text('2.  Keyword atau kata kunci berfungsi untuk menemukan hubungan antara hasil belajar dengan situasi atau masalah di dunia nyata. Poin-poin utama dalam hasil belajar dituliskan dalam bentuk kata kunci.')
+,Text('3. Generate problem atau merumuskan masalah berisi tentang permasalahan yang perlu dituliskan secara terperinci berdasarkan kata kunci yang telah dibuat. Diibaratkan jika kata kunci sebagai seorang pekerja, maka masalah dapat diposisikan sebagai masalah yang mungkin ditemukan dalam suatu pekerjaan.')
+  ,Text('4.  Learning procedure atau prosedur pembelajaran merupakan serangkaian proses yang harus dilaksanakan oleh siswa untuk mencapai solusi atas permasalahan. Dalam komponen ini, perlu juga dituliskan secara eksplisit lamanya pembelajaran, target siswa, sarana dan prasarana pembelajaran. ')
+  ,Text('5.  Student experience atau pengalaman belajar siswa merupakan hal yang sangat penting. Siswa tidak belajar hanya dengan berpikir, tetapi berdasarkan pengalamannya. Pengalaman yang dimaksud tidak hanya berdasarkan panca inderanya (melihat, mendengar, mengatakan), tetapi juga apa yang mereka rasakan. Guru perlu memastikan pengalaman yang harus didapatkan oleh siswa ketika melaksanakan pembelajaran. Perbedaan yang mendasari antara learning procedure dan students experience yaitu bahwa students experience merupakan hasil atau reaksi yang mungkin diperoleh dari aktivitas belajar. ')
+  
+  ,Text('6.	Assessment atau penilaian merupakan bagian yang berfungsi untuk membantu guru memperoleh informasi tentang bagaimana siswa belajar. Terdapat dua pertanyaan yang dapat digunakan untuk membantu guru mendesain penilaian, seperti perilaku seperti apa yang menunjukkan siswa berhasil dalam pembelajaran? Bagaimana cara mengumpulkan atau mengamati perilaku tersebut?')
+  
+  
+  
+  
+  
+  ,
+  Text('Setelah mempelajari komponen-komponen yang harus ada dalam STEM Flower, dibawah ini akan disajikan contoh penerapan desain pembelajaran menggunakan STEM Flower.'),
+  
+  
+  Image.asset('image/f2.png'),
+  Text('Kata kunci dalam permasalahan ini adalah “mangkok”, berkaitan dengan mie berkuah, wadah, sampah, portable, volume, dapat ditekuk. Untuk itu, apabila ada mangkok yang inovatif, terbuat dari material yang tahan lama, dapat ditekuk untuk menghemat tempat, dan mudah dibersihkan sehingga memungkinkan pengguna menggunakannya berulang-ulang. Kemudian, kita menuangkannya dalam sebuah situasi atau permasalahan. Selanjutnya, kegiatan pembelajaran  dilakukan dengan menguji desain yang telah dibuat menggunakan kertas berukuran A4. Desain mangkok dapat dibuat dalam berbagai bentuk, apabila mangkok berbentuk seperti balok, kubus, atau tabung. Saat memasukkan air, siswa akan mengetahui bentuk mana yang dapat menampung lebih banyak air. Disini, siswa akan mengetahui bagaimana cara menentukan ukuran sisi wadah yang memiliki volume paling optimal. Selain itu, menggunakan kertas yang berbeda-beda akan membantu siswa mengetahui bahan yang seperti apa (struktur mikroskopis bahan) yang dapat menampung air lebih lama. Pada tahap ini, siswa akan memperoleh pengalaman dengan menemukan berbagai fenomena seperti berubahnya wadah saat dimasukki air dan meresapnya air sehingga wadah menjadi bocor. Setelah pembelajaran selesai, siswa akan diberikan evaluasi apakan mereka memahami tentang volume bangun ruang dan material penyusun benda melalui penilaian'),
   Text(textAlign:TextAlign.justify,
     
+
+
+
     'Bagaimana Cara Menerapkan Desain Proses Engineering?\n',
     style: big,
   ),
+  Text('Pendidikan STEM sebagai salah satu pendekatan pembelajaran yang menghapuskan batasan antara 4 disiplin dan mengintegrasikannya kedalam dunia nyata, tepat, dan pengalaman belajar yang relevan bagi siswa. STEM harus relevan dengan siswa, fokus pada pengalaman siswa, dan mengikat siswa pada permasalahan dunia nyata. Wichaidit et al., (2019) menyatakan bahwa terdapat tiga kunci utama yang harus ada dalam pembelajaran, antara lain tujuan pembelajaran, aktivitas pembelajaran, dan umpan balik & penilaian. Salah satu desain pembelajaran STEM yang telah diterapkan adalah STEM Flower.'),
+  
   const Text(textAlign:TextAlign.justify,
       
       'Desain proses engineering merupakan tahapan yang dilaksanakan secara siklus yang memberikan kesempatan kepada siswa untuk mengembangkan proses pemecahan masalah sebagai sebuah solusi. Desain proses engineering ini merupakan salah satu strategi yang dapat digunakan untuk mengimplementasikan STEM dalam pembelajaran (Hafiz et al., 2019). National Research Council mendefinisikan desain proses engineering sebagai pendekatan engineering untuk mengidentifikasi dan menyelesaikan masalah yang dilakukan melalui proses berulang, terbuka terhadap gagasan-gagasan penyelesaian masalah, bermakna, dan fleksibel. Proses ini merupakan strategi pedagogis yang memberikan kesempatan kepada siswa untuk melaksanakan langkah-langkah kronologis untuk memperoleh solusi yang efektif yang telah diujikan secara berulang-ulang dan dibenarkan melalui konsep sains dan matematika.\n'),
@@ -316,7 +346,7 @@ Text(textAlign:TextAlign.justify,'User centric memiliki beberapa karakteristik d
   const Text(textAlign:TextAlign.justify,
       
       'Model pembelajaran merupakan kerangka penting yang memberikan gambaran sistematik dalam melaksanakan pembelajaran. Model pembelajaran berisi tentang langkah-langkah kegiatan pembelajaran. Sehingga sangat penting untuk menentukan model pembelajaran yang tepat untuk diterapkan. STEM merupakan pendekatan pembelajaran yang menekankan pada penyelesaian masalah di dunia nyata. Untuk itu, perlu adanya model pembelajaran yang tepat sesuai dengan karakteristik STEM. Pendekatan STEM dapat diintegrasikan dengan berbagai model pembelajaran seperti project-based learning dan problem-based learning.\n'),
-  const Text(textAlign:TextAlign.justify,
+   Text(textAlign:TextAlign.justify,style: bold,
       
       'Project-based learning terintegrasi STEM (PjBL-STEM) Laboy-Rush\n'),
   const Text(textAlign:TextAlign.justify,
