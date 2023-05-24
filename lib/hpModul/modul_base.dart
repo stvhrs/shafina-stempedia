@@ -170,7 +170,7 @@ switch(_selected) {
                         ),
                         const Expanded(
                           child: Text(
-                            'Pembelajaran Berbasis STEM pada Jenjang SMP',
+                            'Pembelajaran IPA dan pembelajaran STEM ',
                           ),
                         ),
                       ],
@@ -224,7 +224,7 @@ switch(_selected) {
         appBar: AppBar(
           actions: [IconButton(
                   icon: const Icon(Icons.home,color: Colors.white,),  onPressed: () {
-                     Navigator.pushNamed(context, '/hakikat');
+                   Navigator.popUntil(context, ModalRoute.withName('/'));
                   },
                 )
           ],

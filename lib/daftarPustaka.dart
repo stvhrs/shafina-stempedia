@@ -105,7 +105,7 @@ class _DaftarPustakaState extends State<DaftarPustaka> {
                 padding:  EdgeInsets.all(8.0),
                 child:MediaQuery.of(context).size.width<1000?IconButton(
                   icon:  Icon(Icons.home,color: Colors.white,),  onPressed: () {
-                     Navigator.pushNamed(context, '/hakikat');
+                    Navigator.popUntil(context, ModalRoute.withName('/'));
                   },
                 ): ElevatedButton.icon(
                   icon: const Text(
@@ -130,7 +130,7 @@ class _DaftarPustakaState extends State<DaftarPustaka> {
             ],
           automaticallyImplyLeading: false,
           leadingWidth: MediaQuery.of(context).size.width / 10,
-          leading: MediaQuery.of(context).size.width<100?IconButton(
+          leading: MediaQuery.of(context).size.width<1000?IconButton(
                   icon: const Icon(Icons.arrow_back, color:Colors.white,),  onPressed: () {
                      Navigator.pushNamed(context, '/hakikat');
                   },

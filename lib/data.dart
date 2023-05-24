@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stempedia/commentFrom.dart';
+import 'package:stempedia/youtube.dart';
 
 import 'listComment.dart';
 
@@ -7,58 +8,7 @@ var bold = const TextStyle(fontWeight: FontWeight.bold);
 var big = const TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
 
 List<Widget> pembelajaranWidget = [
-  Image.asset('image/3.1.png'),
-  const Text(textAlign:TextAlign.justify,
-      
-      'Agar dapat menerapkan STEM dengan baik, maka kita harus mengetahui karakteristik pendekatan yang kita gunakan. Bagaimana karakteristik STEM? Mari kita simak penjelasan berikut ini.\n'),
-  Text(textAlign:TextAlign.justify,
-    
-    'Bagaimana Karakteristik STEM?\n',
-    style: big,
-  ),
-  const Text(textAlign:TextAlign.justify,
-      
-      'STEM sebagai salah satu pendekatan yang dapat diterapkan dalam pembelajaran abad 21. Pelaksanaan pembelajaran berbasis STEM merupakan pendekatan yang mengarahkan siswa untuk membuat berbagai alternatif solusi yang dapat diterapkan dalam menyelesaikan permasalahan dalam dunia nyata. Secara umum, karakteristik STEM antara lain keterampilan abad 21 (21st century skill), tantangan (challenge), pembelajaran aktif (active learning), integrasi (integration), otentik (authentic) (Indarwati et al., 2021; Madahae et al., 2021).\n'),
-  Text(textAlign:TextAlign.justify,
-    
-    'Keterampilan abad 21',
-    style: bold,
-  ),
-  const Text(textAlign:TextAlign.justify,
-      
-      'STEM merupakan pembelajaran yang bertujuan untuk meningkatkan kemampuan yang dibutuhkan pada abad 21. Melalui pembelajaran berbasis STEM, siswa akan mengasah kemampuan berkolaborasi dengan kelompok untuk menghasilkan suatu produk pemecahan masalah. Siswa juga dituntut untuk mampu berpikir kritis terhadap masalah yang terjadi di sekitarnya, mengeluarkan ide kreatifnya untuk menyelesaikan masalah, hingga pada akhirnya siswa diminta untuk mengkomunikasikan hasil temuannya. Hal ini akan mendorong siswa untuk mengasah keterampilan kolaborasi, berpikir kritis, kreativitas, dan komunikasi dimana keterampilan-keterampilan tersebut dikenal dengan istilah 4C’s skill, yaitu keterampilan yang dibutuhkan di dunia kerja pada abad 21.\n'),
-  Text(textAlign:TextAlign.justify,
-    
-    'Tantangan\n',
-    style: bold,
-  ),
-  const Text(textAlign:TextAlign.justify,
-      
-      'Prinsip pembelajaran berbasis STEM adalah pemecahan masalah. Oleh karena itu, siswa diminta untuk membuat sebuah solusi yang dapat digunakan untuk memecahkan masalah. Hal ini menjadi tantangan tersendiri untuk siswa agar dapat menemukan solusi terbaik untuk menyelesaikan masalah tersebut.\n'),
-  Text(textAlign:TextAlign.justify,
-    
-    'Pembelajaran aktif\n',
-    style: bold,
-  ),
-  const Text(textAlign:TextAlign.justify,
-      
-      'Pembelajaran berbasis STEM merupakan pembelajaran yang aktif karena siswa diberikan kebebasan untuk menentukan dan memecahkan masalahnya sendiri. Guru hanya bertindak sebagai fasilitator, sedangkan siswa melaksanakan pembelajaran mulai dari penentuan masalah, mencari dan menemukan solusi, hingga menerapkan solusi dalam kehidupan nyata secara mandiri.\n'),
-  Text(textAlign:TextAlign.justify,
-    
-    'Integrasi\n',
-    style: bold,
-  ),
-  const Text(textAlign:TextAlign.justify,
-      
-      'STEM merupakan integrasi antara sains, teknologi, teknik, dan matematika. Pembelajaran berbasis STEM dilaksanakan dengan mengintegrasikan setidaknya 2 disiplin tersebut.\n'),
-  Text(textAlign:TextAlign.justify,
-    
-    'Otentik\n',
-    style: bold,
-  ),
-  const Text(textAlign:TextAlign.justify,
-      
-      'Permasalahan yang digunakan dalam pembelajaran berbasis STEM merupakan masalah yang nyata dalam kehidupan sehari-hari. Selain itu, solusi yang telah ditemukan harus dapat diterapkan dalam kehidupan sehingga bukan hanya sebagai temuan saja namun harus berdampak dalam mengatasi masalah yang ada.'),
+ 
   Image.asset('image/3.2.png'),
   const Text(textAlign:TextAlign.justify,
       
@@ -70,7 +20,7 @@ List<Widget> pembelajaranWidget = [
   ),
   const Text(textAlign:TextAlign.justify,
       
-      'Sekolah menengah pertama atau SMP merupakan salah satu tahap pendidikan yang harus ditempuh siswa. SMP termasuk dalam kelompok pendidikan dasar setelah menempuh sekolah dasar atau SD. Pendidikan dasar merupakan pendidikan yang tujuannya untuk mengembangkan kualitas manusia melalui pendidikan yang terarah, terencana, dan berkesinambungan (Zuryanty et al., 2020). Pendidikan pada jenjang ini harus dilalui karena pada tahap inilah siswa mulai mengalami perkembangan kognitif, afektif, dan psikomotor sesuai dengan tujuan pendidikan nasional yang tertuang dalam UU Pasal 3 No. 20 Tahun 2003 tentang sistem pendidikan nasional. Hal ini bertujuan agar siswa mampu mempersiapkan diri dalam menghadapi pendidikan pada jenjang atas. Selain itu, tujuan pendidikan dasar pada jenjang SMP ini antara lain membekali siswa dalam mengembangkan keterampilan dasar, mempersiapkan siswa dalam melanjutkan pendidikan lanjutan, dan pembentukan warga negara yang baik.\n'),
+      'Sekolah menengah pertama atau SMP merupakan salah satu tahap pendidikan yang harus ditempuh siswa. SMP termasuk dalam kelompok pendidikan dasar setelah menempuh sekolah dasar atau SD. Pendidikan dasar merupakan pendidikan yang tujuannya untuk mengembangkan kualitas manusia melalui pendidikan yang terarah, terencana, dan berkesinambungan (Zuryanty et al., 2020). Pendidikan pada jenjang ini harus dilalui karena pada tahap inilah siswa mulai mengalami perkembangan kognitif, afektif, dan psikomotor sesuai dengan tujuan pendidikan nasional yang tertuang dalam UU Pasal 3 No. 20 Tahun 2003 tentang sistem pendidikan nasional. Hal ini bertujuan agar siswa mampu mempersiapkan diri dalam menghadapi pendidikan pada jenjang atas. Selain itu, tujuan pendidikan dasar pada jenjang SMP ini antara lain membekali siswa dalam mengembangkan keterampilan dasar, mempersiapkan siswa dalam melanjutkan pendidikan lanjutan, dan pembentukan warga negara yang baik. Penjelasan tujuan pendidikan dasar pada jenjang SMP antara lain: \n'),
   Text(textAlign:TextAlign.justify,
     
     'Pengembangan keterampilan dasar\n',
@@ -95,7 +45,8 @@ List<Widget> pembelajaranWidget = [
   const Text(textAlign:TextAlign.justify,
       
       'Pendidikan dasar yang baik harus mampu mewadahi pengembangan sikap, pengetahuan, dan keterampilan agar siswa dapat menjadi pribadi dan warga negara yang baik dan sesuai dengan kompetensi yang dibutuhkan dalam dunia pekerjaan. Untuk itu, pendidikan dasar haru mampu membantu siswa dalam mencapai tujuan tersebut, yaitu menjadi warga negara yang baik.\n'),
-  const Text(textAlign:TextAlign.justify,
+
+ Text("Apa Saja Prinsip Dasar Pendidikan Dasar pada Jenjang SMP?\n ",style: big,), const Text(textAlign:TextAlign.justify,
       
       '      Keberhasilan pelaksanaan pendidikan dasar pada jenjang SMP tidak terlepas dari landasan pendidikan yang dijadikan sebagai acuan untuk melaksanakan kegiatan pendidikan tersebut. Landasan pendidikan dasar tersebut tertuang dalam primsip dasar pendidikan dasar. Prinsip dasar pendidikan dasar merupakan landasan yang berasal dari asumsi-asumsi yang dikemukakan secara empiris oleh para ahli, penilaian masyarakat maupun pemerintah dan dijadikan sebagai pertimbangan untuk melaksanakan pendidikan dasar atau dapat diartikan pula sebagai rujukan untuk melaksanakan pendidikan (Wardani, 2019). Prinsip dasar pendidikan dasar tersebut dikelompokkan sebagai berikut.\n'),
   Text(textAlign:TextAlign.justify,
@@ -105,7 +56,7 @@ List<Widget> pembelajaranWidget = [
   ),
   const Text(textAlign:TextAlign.justify,
       
-      'Permasalahan yang diperoleh suatu negara akan memberikan pengalaman yang beragam terhadap masyarakat di negara tersebut. Pengalaman yang telah diperoleh akan menjadi bekal dalam melaksanakan kehidupan. Hal ini akan mendorong terbentuknya nilai-nilai yang dianggap benar dan sesuai dengan kondisi masyarakat tersebut termasuk dalam disiplin pendidikan. Pengalaman pendidikan yang selama ini diperoleh akan menjadi landasan folosofi bagi masyarakat untuk melaksanakan pendidikan di masa yang akan datang. Pengalaman yang diperoleh tersebut tidak terlepas dari faktor lingkungan sekitar dan karakteristik masyarakat yang dapat berpengaruh terhadap pelaksanaan pendidikan.\n'),
+      'Permasalahan yang diperoleh suatu negara akan memberikan pengalaman yang beragam terhadap masyarakat di negara tersebut. Pengalaman yang telah diperoleh akan menjadi bekal dalam melaksanakan kehidupan. Hal ini akan mendorong terbentuknya nilai-nilai yang dianggap benar dan sesuai dengan kondisi masyarakat tersebut termasuk dalam disiplin pendidikan. Pengalaman pendidikan yang selama ini diperoleh akan menjadi landasan folosofi bagi masyarakat untuk melaksanakan pendidikan di masa yang akan datang. Pengalaman yang diperoleh tersebut tidak terlepas dari faktor lingkungan sekitar dan karakteristik masyarakat yang dapat berpengaruh terhadap pelaksanaan pendidikan. Pengaruh lingkungan dan masyarakat ini merupakan prinsip dasar anthropologi pendidikan dasar. Melalui lingkungan dan masyarakat, siswa akan mengalami interaksi untuk mendukung kegiatan pembelajaran dalam bentuk proses belajar dan proses sosial. Hal inilah yang mendasari prinsip dasar sosiologi pembelajaran siswa . \n'),
   Text(textAlign:TextAlign.justify,
     
     'Prinsip dasar psikologis dan pedagogis\n',
@@ -180,7 +131,7 @@ List<Widget> penerapanWidgets = [
   ),
   const Text(textAlign:TextAlign.justify,
       
-      'Pendekatan tertanam dapat didefinisikan sebagai sebuah pendekatan dimana pengetahuan diperoleh melalui pengalaman menyelesaikan masalah di dunia nyata. Pendekatan ini menekankan pada salah satu disiplin STEM yang didalamnya akan diselipkan disiplin STEM yang lainnya. Pola pendekatan tertanam dapat dilihat pada\n'),
+      'Pendekatan tertanam dapat didefinisikan sebagai sebuah pendekatan dimana pengetahuan diperoleh melalui pengalaman menyelesaikan masalah di dunia nyata. Pendekatan ini menekankan pada salah satu disiplin STEM yang didalamnya akan diselipkan disiplin STEM yang lainnya. Pola pendekatan tertanam dapat dilihat pada gambar berikut\n'),
   Center(child: Image.asset('image/4.3.jpg')),
   const Text(textAlign:TextAlign.justify,
       
@@ -197,7 +148,7 @@ List<Widget> penerapanWidgets = [
   ////
   Center(child: Image.asset('image/4.4.jpg')),
   Text(textAlign:TextAlign.justify,
-      'Setelah mempelajari beberapa metode pendekatan STEM, sekarang kita akan mempelajari salah satu model pengintegrasian STEM berdasarkan pendekatan terpadu. Beberapa contoh desain pendekatan terpadu disusun untuk memberikan kemudahan guru untuk mengintegrasikan STEM. Berikut ini disajikan beberapa integrasi STEM diantaranya STEM Quartet, STEM Flower Design, dan Gaming Learning in STEM. '),
+      'Setelah mempelajari beberapa metode pendekatan STEM, sekarang kita akan mempelajari salah satu model pengintegrasian STEM berdasarkan pendekatan terpadu. Beberapa contoh desain pendekatan terpadu disusun untuk memberikan kemudahan guru untuk mengintegrasikan STEM. Berikut ini disajikan beberapa integrasi STEM diantaranya STEM Quartet, STEM Flower Design, dan Gaming Learning in STEM. Berikut ini disajikan salah satu contoh penerapan pendekatan terpadu melalui desain STEM Quartet.  '),
   Text(textAlign:TextAlign.justify,
     '\nSTEM Quartet\n',
     style: bold,
@@ -480,7 +431,7 @@ Text(textAlign:TextAlign.justify,'User centric memiliki beberapa karakteristik d
         style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
       ),
     ],
-  ),
+  ),YoutubeAppDemo(),
   const Divider(),
   const Commnet('penerapan'),
   const CommentFrom('penerapan')
@@ -501,7 +452,7 @@ List<Widget> hakikatWidgets = [
   Image.asset('image/1.2.png'),
   const Text(textAlign:TextAlign.justify,
       
-      'Setelah mengetahui sejarah terbentuknya STEM dan perkembangan STEM di Indonesia, kita akan mempelajari tentang penjelasan tentang STEM. Teman-teman pasti sudah mengetahui bahwa STEM itu terdiri atas 4 komponen utama, yaitu ilmu pengetahuan (science), teknologi (technology), teknik (engineering), dan matematika (mathematics). Untuk memperdalam pemahaman kalian tentang komponen STEM tersebut, mari simak penjelasan berikut'),
+      'Setelah mengetahui sejarah terbentuknya STEM dan perkembangan STEM di Indonesia, kita akan mempelajari tentang penjelasan tentang STEM. Teman-teman pasti sudah mengetahui bahwa STEM itu terdiri atas 4 komponen utama, yaitu ilmu pengetahuan (science), teknologi (technology), teknik (engineering), dan matematika (mathematics). Untuk memperdalam pemahaman kalian tentang komponen STEM tersebut, mari simak penjelasan tentang komponen STEM menurut (California Department of Education, 2014) berikut.'),
   Text(textAlign:TextAlign.justify, '\nApa saja Komponen STEM?', style: big),
   Text(textAlign:TextAlign.justify,
       
@@ -533,7 +484,7 @@ List<Widget> hakikatWidgets = [
   ),
   const Text(textAlign:TextAlign.justify,
       
-      'Matematika mempelajari tentang hubungan antara kuantitas, nomor, dan ruang. Jika ilmu pengetahuan diperoleh melalui bukti empiris, matematika diperoleh melalui argumen logis berdasarkan asumsi-asumsi dasar (California Department of Education, 2014).Seiring berjalannya waktu, ternyata definisi STEM terus mengalami perkembangan. Saat ini, telah ada 4 tingkatan definisi STEM, antara lain STEM 1.0, 2.0, 3.0, dan 4.0 seperti yang dikutip dalam artikel What Should a Chinese Top-Level Design in STEM Education Look Like? (2022). Lalu, apa saja 4 tingkatan STEM tersebut? Pertanyaan ini akan kita bahas pada penjelasan dibawah ini.'),
+      'Matematika mempelajari tentang hubungan antara kuantitas, nomor, dan ruang. Jika ilmu pengetahuan diperoleh melalui bukti empiris, matematika diperoleh melalui argumen logis berdasarkan asumsi-asumsi dasar. Seiring berjalannya waktu, ternyata definisi STEM terus mengalami perkembangan. Saat ini, telah ada 4 tingkatan definisi STEM, antara lain STEM 1.0, 2.0, 3.0, dan 4.0 seperti yang dikutip dalam artikel What Should a Chinese Top-Level Design in STEM Education Look Like? (2022) What Should a Chinese Top-Level Design in STEM Education Look Like? menurut Bichang Zhoung (2022). Lalu, apa saja 4 tingkatan STEM tersebut? Pertanyaan ini akan kita bahas pada penjelasan dibawah ini.'),
   Center(
       child: Image.asset(
     'image/1.3.jpg',
@@ -541,7 +492,7 @@ List<Widget> hakikatWidgets = [
   )),
   const Text(textAlign:TextAlign.justify,
       
-      'Berdasarkan gambar diatas, pendidikan STEM 1.0 termasuk dalam pendekatan disiplin terpusat. Pendekatan ini menerangkan bahwa STEM dilaksanakan secara terpisah pada masing-masing disiplin. Pada level ini, siswa membutuhkan kemampuan berpikir unistruktural, yaitu kemampuan untuk menyelesaikan masalah menggunakan satu konsep yang cocok. Definisi STEM dijelaskan kembali oleh para peneliti seperti Ung (2019) yang menjelaskan tentang konsep STEM 1.0. Dalam penelitiannya, Ung menyatakan bahwa STEM adalah 4 disiplin ilmu yang terpisah antara sains, teknologi, teknik, dan matematika.\n'),
+      'Berdasarkan gambar yang dikutip dari Zhong et al. (2022) diatas, pendidikan STEM 1.0 termasuk dalam pendekatan disiplin terpusat. Pendekatan ini menerangkan bahwa STEM dilaksanakan secara terpisah pada masing-masing disiplin. Pada level ini, siswa membutuhkan kemampuan berpikir unistruktural, yaitu kemampuan untuk menyelesaikan masalah menggunakan satu konsep yang cocok. Definisi STEM dijelaskan kembali oleh para peneliti seperti Ung (2019) yang menjelaskan tentang konsep STEM 1.0. Dalam penelitiannya, Ung menyatakan bahwa STEM adalah 4 disiplin ilmu yang terpisah antara sains, teknologi, teknik, dan matematika.\n'),
   const Text(textAlign:TextAlign.justify,
       
       '       Tingkatan STEM 2.0 didefinisikan sebagai integrasi dari dua disiplin STEM untuk menyelesaikan masalah, seperti sains-teknologi, sains-matematika, sains-teknik, dan sebagainya. Dengan adanya integrasi antara dua disiplin, pendidikan STEM 2.0 termasuk dalam ilmu multidisiplin. Ilmu multidisiplin yaitu ilmu yang melibatkan minimal 2 disiplin ilmu yang saling berkaitan, namun tidak ada interaksi antara disiplin-disiplin tersebut. Kelley & Knowles (2016) juga mendukung definisi STEM 2.0 yang menyatakan bahwa STEM merupakan pendekatan yang terdiri atas dua atau lebih subjek STEM, atau diantara subjek STEM dengan satu atau lebih subjek pembelajaran yang lain. Penerapan STEM yang menggunakan pendekatan ini membutuhkan kemampuan berpikir multistruktural, yaitu menggunakan 2 disiplin ilmu untuk menyelesaikan permasalahan.\n'),
@@ -583,7 +534,7 @@ List<Widget> artiWidgets = [
       '     President’s Council of Advisors on Science and Technology (Khairiyah, 2019) menjelaskan 4 tujuan pembelajaran berbasis STEM yang dapat dilihat pada \n'),
   Center(child: Image.asset('image/2.3.jpg')),
   const Text(textAlign:TextAlign.justify,
-      'Penguasaan disiplin-disiplin STEM seperti tabel diatas sangat dibutuhkan untuk memenuhi tuntutan keterampilan abad 21. Arus globalisasi serta pengembangan teknologi informasi dan komunikasi berjalan dengan sangat cepat menyebabkan mau tidak mau tenaga kerja harus menguasai keterampilan tersebut. Keterampilan tersebut antara lain keterampilan kognitif (cognitive skill), pemrosesan informasi (information processing), pemecahan masalah (problem solving) dan keterampilan kolaborasi dan komunikasi (collaboration and communication skills) (Ceylan et al., 2016; Ung, 2019).\n'),
+      'Penguasaan disiplin-disiplin STEM seperti tabel diatas sangat dibutuhkan untuk memenuhi tuntutan keterampilan abad 21. Arus globalisasi serta pengembangan teknologi informasi dan komunikasi berjalan dengan sangat cepat menyebabkan mau tidak mau tenaga kerja harus menguasai keterampilan tersebut. Keterampilan tersebut antara lain keterampilan kognitif (cognitive skill), pemrosesan informasi (information processing), pemecahan masalah (problem solving) dan keterampilan kolaborasi dan komunikasi (collaboration and communication skills) (Ceylan et al., 2016; Ung, 2019). Berikut ini merupakan penjelasan dari masing-masing aspek: \n'),
   const Text(textAlign:TextAlign.justify,
       '1.Keterampilan kognitif meliputi proses mental dalam memahami melalui proses berpikir dan pengalaman. Keterampilan kognitif meliputi keterampilan berpikir kritis, kreatif, analisis, investigasi ilmiah, dan berpikir komputasi. \n'),
   const Text(textAlign:TextAlign.justify,
@@ -602,7 +553,60 @@ List<Widget> artiWidgets = [
         style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
       ),
     ],
+  ), Image.asset('image/3.1.png'),
+  const Text(textAlign:TextAlign.justify,
+      
+      'Agar dapat menerapkan STEM dengan baik, maka kita harus mengetahui karakteristik pendekatan yang kita gunakan. Bagaimana karakteristik STEM? Mari kita simak penjelasan berikut ini.\n'),
+  Text(textAlign:TextAlign.justify,
+    
+    'Bagaimana hubungan STEM dengan pembelajaran IPA?\n',
+    style: big,
   ),
+  const Text(textAlign:TextAlign.justify,
+      
+      'STEM sebagai salah satu pendekatan yang dapat diterapkan dalam pembelajaran abad 21. Pelaksanaan pembelajaran berbasis STEM merupakan pendekatan yang mengarahkan siswa untuk membuat berbagai alternatif solusi yang dapat diterapkan dalam menyelesaikan permasalahan dalam dunia nyata. Secara umum, karakteristik STEM antara lain keterampilan abad 21 (21st century skill), tantangan (challenge), pembelajaran aktif (active learning), integrasi (integration), otentik (authentic) (Indarwati et al., 2021; Madahae et al., 2021).\n'),
+  Text(textAlign:TextAlign.justify,'Sains merupakan salah satu aspek penting dalam STEM. Hal ini membuat STEM sangat erat kaitannya dengan IPA. Pelaksanaan pembelajaran IPA berbasis STEM akan mengarahkan siswa untuk membuat berbagai alternatif solusi yang dapat diterapkan dalam menyelesaikan permasalahan dalam dunia nyata. Secara umum, penerapan STEM sesuai dengan pembelajaran IPA di SMP karena akan membantu mengasah keterampilan abad 21 (21st century skill), memberikan tantangan (challenge), pembelajaran aktif (active learning), integrasi (integration), dan otentik (authentic) (Indarwati et al., 2021; Madahae et al., 2021). Berikut ini disajikan uraian singkat komponen-komponen tersebut, antara lain: \n ')
+  
+  ,Text(textAlign:TextAlign.justify,
+    
+    'Keterampilan abad 21',
+    style: bold,
+  ),
+  const Text(textAlign:TextAlign.justify,
+      
+      'STEM merupakan pembelajaran yang bertujuan untuk meningkatkan kemampuan yang dibutuhkan pada abad 21. Melalui pembelajaran berbasis STEM, siswa akan mengasah kemampuan berkolaborasi dengan kelompok untuk menghasilkan suatu produk pemecahan masalah. Siswa juga dituntut untuk mampu berpikir kritis terhadap masalah yang terjadi di sekitarnya, mengeluarkan ide kreatifnya untuk menyelesaikan masalah, hingga pada akhirnya siswa diminta untuk mengkomunikasikan hasil temuannya. Hal ini akan mendorong siswa untuk mengasah keterampilan kolaborasi, berpikir kritis, kreativitas, dan komunikasi dimana keterampilan-keterampilan tersebut dikenal dengan istilah 4C’s skill, yaitu keterampilan yang dibutuhkan di dunia kerja pada abad 21.\n'),
+  Text(textAlign:TextAlign.justify,
+    
+    'Tantangan\n',
+    style: bold,
+  ),
+  const Text(textAlign:TextAlign.justify,
+      
+      'Prinsip pembelajaran berbasis STEM adalah pemecahan masalah. Oleh karena itu, siswa diminta untuk membuat sebuah solusi yang dapat digunakan untuk memecahkan masalah. Hal ini menjadi tantangan tersendiri untuk siswa agar dapat menemukan solusi terbaik untuk menyelesaikan masalah tersebut.\n'),
+  Text(textAlign:TextAlign.justify,
+    
+    'Pembelajaran aktif\n',
+    style: bold,
+  ),
+  const Text(textAlign:TextAlign.justify,
+      
+      'Pembelajaran berbasis STEM merupakan pembelajaran yang aktif karena siswa diberikan kebebasan untuk menentukan dan memecahkan masalahnya sendiri. Guru hanya bertindak sebagai fasilitator, sedangkan siswa melaksanakan pembelajaran mulai dari penentuan masalah, mencari dan menemukan solusi, hingga menerapkan solusi dalam kehidupan nyata secara mandiri.\n'),
+  Text(textAlign:TextAlign.justify,
+    
+    'Integrasi\n',
+    style: bold,
+  ),
+  const Text(textAlign:TextAlign.justify,
+      
+      'STEM merupakan integrasi antara sains, teknologi, teknik, dan matematika. Pembelajaran berbasis STEM dilaksanakan dengan mengintegrasikan setidaknya 2 disiplin tersebut.\n'),
+  Text(textAlign:TextAlign.justify,
+    
+    'Otentik\n',
+    style: bold,
+  ),
+  const Text(textAlign:TextAlign.justify,
+      
+      'Permasalahan yang digunakan dalam pembelajaran berbasis STEM merupakan masalah yang nyata dalam kehidupan sehari-hari. Selain itu, solusi yang telah ditemukan harus dapat diterapkan dalam kehidupan sehingga bukan hanya sebagai temuan saja namun harus berdampak dalam mengatasi masalah yang ada.'),
   const Divider(),
   const Commnet('arti'),
   const CommentFrom('arti')

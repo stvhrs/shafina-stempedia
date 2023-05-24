@@ -36,7 +36,7 @@ class Pembelajaran extends StatelessWidget {
           ),
           title: const Text(
               textAlign: TextAlign.justify,
-              '3:Pembelajaran Berbasis STEM pada Jenjang SMP'),
+              '3:Pembelajaran IPA dan Pembelajaran STEM '),
         ),
         body: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Expanded(
@@ -138,7 +138,7 @@ class Pembelajaran extends StatelessWidget {
                             ),
                             Expanded(
                               child: Text(
-                                'Pembelajaran Berbasis STEM pada Jenjang SMP',
+                                'Pembelajaran IPA dan pembelajaran STEM ',
                                 style: TextStyle(color: Colors.white),
                               ),
                             ),

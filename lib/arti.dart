@@ -140,7 +140,7 @@ class Arti extends StatelessWidget {
                             ),
                             const Expanded(
                               child: Text(
-                                'Pembelajaran Berbasis STEM pada Jenjang SMP',
+                                'Pembelajaran IPA dan pembelajaran STEM ',
                               ),
                             ),
                           ],

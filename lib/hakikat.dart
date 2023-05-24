@@ -143,7 +143,7 @@ color: Theme.of(context).colorScheme.primary
                             ),
                             const Expanded(
                               child: Text(
-                                'Pembelajaran Berbasis STEM pada Jenjang SMP',
+                                'Pembelajaran IPA dan pembelajaran STEM ',
                               
                               ),
                             ),
